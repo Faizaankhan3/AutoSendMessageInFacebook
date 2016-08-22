@@ -1,0 +1,14 @@
+var msg  = "MESSAGE";
+var chatBox  = document.getElementsByName("message_body")[0];
+var replyBut = document.getElementById("u_jsonp_2_8");
+ 
+var kitInt   = setInterval(function() {
+    chatBox.classList.remove("DOMControl_placeholder")
+    chatBox.value = msg + " ";
+     setTimeout(function(){
+        replyBut.click();
+    }, 1000);
+ 
+}, 1000);
+ 
+var stopKit = function() { clearInterval(kitInt); };
